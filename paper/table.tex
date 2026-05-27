@@ -1,0 +1,93 @@
+\begin{table}[h!]
+\centering
+\captionof{table}{Relative bias of LID estimates. All algorithm names explained in Table~\ref{tab:skdim}}\label{tab:comparison}
+\scalebox{0.88}{
+\begin{tabular}{ | c | c || c | c || c | c | c | c | c |  c | c | c | c | c |}
+ \hline
+ Distribution & LID &LIDL$_{M}$&LIDL$_{R}$&COR&ESS&KNN&LPC& MAD&MIN&MLE&MOM&TLE&TWO \\ \hline\hline
+
+
+Lollipop in $\R^2$&0&\textbf{0.00}&\textbf{0.00}&1.67&1.67&1.60&1.67&1.82&1.67&1.80&1.74&-&1.65\\\hline
+Lollipop in $\R^2$&1&\textbf{0.00}&\textbf{0.01}&\textbf{0.00}&\textbf{0.00}&0.58&\textbf{0.01}&0.10&\textbf{0.00}&\textbf{0.05}&\textbf{0.00}&-&\textbf{0.00}\\\hline
+Lollipop in $\R^2$&2&\textbf{-0.00}&\textbf{-0.00}&\textbf{-0.01}&\textbf{-0.00}&-0.07&\textbf{0.00}&0.10&\textbf{-0.00}&0.08&\textbf{0.01}&-&\textbf{-0.03}\\\hline
+$\U$ on helix in $\R^3$&1&\textbf{0.01}&\textbf{0.00}&\textbf{0.00}&\textbf{0.00}&0.68&\textbf{0.00}&0.12&\textbf{0.00}&0.06&\textbf{0.00}&\textbf{0.00}&\textbf{0.00}\\\hline
+$\U$ on $S^7 \subseteq \R^8$&7&\textbf{-0.00}&\textbf{0.00}&-0.28&\textbf{0.00}&-0.37&\textbf{0.00}&\textbf{0.03}&-0.18&\textbf{0.02}&\textbf{-0.04}&0.08&-0.13\\\hline
+Swiss roll in $\R^3$&2&\textbf{0.04}&\textbf{0.01}&\textbf{-0.00}&\textbf{0.00}&\textbf{-0.05}&\textbf{0.00}&0.06&\textbf{0.00}&0.05&\textbf{0.00}&0.05&\textbf{-0.01}\\\hline
+$\N_{10} \subseteq \R^{10}$&10&\textbf{0.00}&\textbf{0.00}&-0.40&\textbf{-0.00}&-0.47&\textbf{0.00}&\textbf{0.02}&-0.25&\textbf{0.01}&-0.07&\textbf{0.01}&-0.16\\\hline
+$\N_{100} \subseteq \R^{100}$&100&\textbf{-0.00}&\textbf{0.00}&-0.78&\textbf{-0.01}&-0.66&-0.28&-0.51&-0.90&-0.50&-0.57&-0.56&-0.60\\\hline
+$\N_{1000} \subseteq \R^{1000}$&1000&\textbf{0.00}&\textbf{0.00}&-0.93&-0.09&-0.74&-0.90&-0.83&-0.99&-0.82&-0.85&-0.85&-0.86\\\hline
+$\N_{4000} \subseteq \R^{4000}$&4000&\textbf{-0.00}&-&-0.96&-0.29&-0.77&-0.98&-0.91&-1.00&-0.91&-0.92&-0.93&-0.93\\\hline
+$\N_{10}\subseteq \R^{20}$&10&\textbf{0.00}&\textbf{0.01}&-0.40&\textbf{-0.00}&-0.25&\textbf{0.00}&\textbf{0.02}&-0.25&\textbf{0.01}&-0.07&\textbf{0.01}&-0.16\\\hline
+$\N_{100} \subseteq \R^{200}$&100&\textbf{0.04}&\textbf{0.03}&-0.78&\textbf{-0.01}&-0.46&-0.28&-0.51&-0.90&-0.50&-0.57&-0.56&-0.60\\\hline
+$\N_{1000}\subseteq \R^{2000}$&1000&0.11&0.30&-0.93&-0.09&-0.52&-0.90&-0.83&-0.99&-0.82&-0.85&-0.85&-0.86\\\hline
+$\N_{2000}\subseteq \R^{4000}$&2000&0.11&-&-0.95&-0.17&-0.55&-0.95&-0.88&-0.99&-0.87&-0.89&-0.90&-0.90\\\hline
+$\U_{10} \subseteq \R^{10}$&10&\textbf{-0.04}&\textbf{-0.04}&-0.39&-0.07&-0.47&\textbf{0.00}&-0.10&-0.29&-0.11&-0.17&-0.07&-0.22\\\hline
+$\U_{100} \subseteq \R^{100}$&100&\textbf{0.00}&\textbf{0.01}&-0.75&\textbf{-0.02}&-0.67&-0.28&-0.50&-0.90&-0.49&-0.56&-0.53&-0.59\\\hline
+$\U_{1000} \subseteq \R^{1000}$&1000&\textbf{-0.00}&\textbf{0.00}&-0.92&-0.09&-0.76&-0.90&-0.81&-0.99&-0.81&-0.84&-0.84&-0.85\\\hline
+$\U_{4000} \subseteq \R^{4000}$&4000&\textbf{-0.00}&-&-0.96&-0.29&-0.78&-0.98&-0.90&-1.00&-0.90&-0.92&-0.92&-0.92\\\hline
+
+
+
+ \hline\end{tabular}}
+\end{table}
+
+
+\begin{table}[h!]
+\centering
+\captionof{table}{Relative MAE of LID estimates. All algorithm names explained in Table~\ref{tab:skdim}}\label{tab:comparison-mae}
+\scalebox{0.88}{
+\begin{tabular}{ | c | c || c | c || c | c | c | c | c |  c | c | c | c | c |}
+ \hline
+ Distribution & LID &LIDL$_{M}$&LIDL$_{R}$&COR&ESS&KNN&LPC& MAD&MIN&MLE&MOM&TLE&TWO \\ \hline\hline
+
+
+Lollipop in $\R^2$&0&\textbf{0.00}&\textbf{0.00}&1.67&1.67&1.60&1.67&1.82&1.67&1.80&1.74&-&1.65\\\hline
+Lollipop in $\R^2$&1&\textbf{0.00}&\textbf{0.01}&\textbf{0.00}&\textbf{0.00}&0.58&\textbf{0.01}&0.12&\textbf{0.00}&\textbf{0.05}&\textbf{0.00}&-&\textbf{0.00}\\\hline
+Lollipop in $\R^2$&2&\textbf{0.01}&\textbf{0.01}&\textbf{0.01}&\textbf{0.00}&0.62&\textbf{0.00}&0.43&\textbf{0.00}&0.25&\textbf{0.03}&-&\textbf{0.05}\\\hline
+$\U$ on helix in $\R^3$&1&\textbf{0.01}&\textbf{0.00}&\textbf{0.00}&\textbf{0.00}&0.68&\textbf{0.00}&0.14&\textbf{0.00}&0.06&\textbf{0.00}&\textbf{0.00}&\textbf{0.00}\\\hline
+$\U$ on $S^7 \subseteq \R^8$&7&\textbf{0.00}&\textbf{0.00}&0.28&\textbf{0.00}&0.44&\textbf{0.00}&0.27&0.18&0.18&0.08&0.17&0.15\\\hline
+Swiss roll in $\R^3$&2&0.06&\textbf{0.01}&\textbf{0.00}&\textbf{0.00}&0.37&\textbf{0.00}&0.25&\textbf{0.00}&0.14&\textbf{0.02}&0.06&\textbf{0.03}\\\hline
+$\N_{10} \subseteq \R^{10}$&10&\textbf{0.00}&\textbf{0.01}&0.40&\textbf{0.00}&0.47&\textbf{0.00}&0.27&0.25&0.19&0.11&0.16&0.17\\\hline
+$\N_{100} \subseteq \R^{100}$&100&\textbf{0.00}&\textbf{0.02}&0.78&\textbf{0.02}&0.66&0.28&0.52&0.90&0.50&0.57&0.56&0.60\\\hline
+$\N_{1000} \subseteq \R^{1000}$&1000&\textbf{0.00}&\textbf{0.01}&0.93&0.09&0.74&0.90&0.83&0.99&0.82&0.85&0.85&0.86\\\hline
+$\N_{4000} \subseteq \R^{4000}$&4000&\textbf{0.01}&-&0.96&0.29&0.77&0.98&0.91&1.00&0.91&0.92&0.93&0.93\\\hline
+$\N_{10}\subseteq \R^{20}$&10&\textbf{0.00}&\textbf{0.01}&0.40&\textbf{0.00}&0.68&\textbf{0.00}&0.27&0.25&0.19&0.11&0.16&0.17\\\hline
+$\N_{100} \subseteq \R^{200}$&100&\textbf{0.04}&\textbf{0.03}&0.78&\textbf{0.02}&0.87&0.28&0.52&0.90&0.50&0.57&0.56&0.60\\\hline
+$\N_{1000}\subseteq \R^{2000}$&1000&0.12&0.30&0.93&0.09&0.95&0.90&0.83&0.99&0.82&0.85&0.85&0.86\\\hline
+$\N_{2000}\subseteq \R^{4000}$&2000&0.12&-&0.95&0.17&0.96&0.95&0.88&0.99&0.87&0.89&0.90&0.90\\\hline
+$\U_{10} \subseteq \R^{10}$&10&\textbf{0.04}&\textbf{0.04}&0.39&0.07&0.47&\textbf{0.00}&0.27&0.29&0.20&0.18&0.17&0.22\\\hline
+$\U_{100} \subseteq \R^{100}$&100&\textbf{0.00}&\textbf{0.02}&0.75&\textbf{0.02}&0.67&0.28&0.50&0.90&0.49&0.56&0.53&0.59\\\hline
+$\U_{1000} \subseteq \R^{1000}$&1000&\textbf{0.00}&\textbf{0.02}&0.92&0.09&0.76&0.90&0.81&0.99&0.81&0.84&0.84&0.85\\\hline
+$\U_{4000} \subseteq \R^{4000}$&4000&\textbf{0.01}&-&0.96&0.29&0.78&0.98&0.90&1.00&0.90&0.92&0.92&0.92\\\hline
+
+
+ \hline\end{tabular}}
+\end{table}
+
+
+
+\begin{table}[h!]
+\centering
+\captionof{table}{Algorithms used for comparison. All implementations from scikit-dimension library \citep{e23101368}.}
+\label{tab:skdim}
+\scalebox{0.88}{
+\begin{tabular}{ | c || c | c |}
+ \hline
+ Name & Shortcut & citation \\ \hline\hline
+
+CorrInt &COR &\cite{gassberger1983measuring} \\
+MADA &MAD &\cite{farahmand2007manifold} \\
+MLE &MLE &\cite{levina2004maximum} \\
+lPCA &LPC &\cite{cangelosi2007component} \\
+KNN &KNN &\cite{carter2009local} \\
+DANCo &DAN &\cite{CERUTI20142569} \\
+MiND\_ML &MIN &\cite{rozza2012novel} \\
+ESS &ESS &\cite{johnsson2014low} \\
+MOM &MOM &\cite{amsaleg2018extreme} \\
+FisherS &FIS &\cite{albergante2019estimating} \\
+TwoNN &TWO &\cite{facco2017estimating} \\
+TLE &TLE &\cite{amsaleg2019intrinsic} \\
+
+\hline\end{tabular}}
+\end{table}
+

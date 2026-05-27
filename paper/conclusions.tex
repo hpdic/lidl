@@ -1,0 +1,60 @@
+\section{Conclusions}
+\label{sec:conclusions}
+
+We identified three challenges in LID estimation and explained how the existing methods do satisfy those desiderata. 
+To overcome those limitations we introduced an algorithm for LID estimation which relies on powerful neural parametric density estimators, and provided solid theoretical justification for the method. 
+Our experiments showed that it can scale to datasets of thousands of dimensions and give accurate estimates on complicated manifolds. 
+We investigated its strengths and limitations and showed that LID is connected with local model performance, 
+especially in unsupervised learning and classification settings.
+
+
+There is a number of future research directions stemming from this work. 
+The first one is a more theoretically grounded and experimentally tested procedure for choosing $\delta$ in the presence of observation noise, which might be important for practitioners. 
+Another one is further investigating the connection of LID estimates and classifier performance: LID estimates could be used in active learning, semi supervised learning or curriculum learning. 
+
+\section{Acknowledgements}
+Some experiments were performed using the Entropy cluster at the Institute of Informatics, University of Warsaw, funded by NVIDIA, Intel, the Polish National Science Center grant UMO2017/26/E/ST6/00622 and ERC Starting Grant TOTAL. 
+Some experiments were performed using the GUŚLARZ 9000 workstation at the Polish National Institute for Machine Learning.
+
+Jacek Tabor is supported by Foundation for Polish Science (grant no POIR.04.04.00-00-14DE/18-00) carried out within the Team-Net program co-financed by the European Union under the European Regional Development Fund.
+Przemysław Spurek is supported by the National Centre of Science (Poland) Grant No. 2019/33/B/ST6/00894.
+Adam Goliński is supported by the UK EPSRC CDT in Autonomous Intelligent Machines and Systems.
+
+We wish to thank various people for their contribution to this project: Marek Cygan for overall support during this project and valuable and constructive suggestions on the manuscript; Maciej Dziubiński, Piotr Kozakowski, Dominik Filipak, and Maciej Śliwowski for their valuable and constructive suggestions on the manuscript.
+
+\section{CRediT Author Statement}
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.4}
+
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lllllll}
+ & \rotatebox{70}{PT} & \rotatebox{70}{RM} & \rotatebox{70}{ŁG} & \rotatebox{70}{PS} & \rotatebox{70}{JT} & \rotatebox{70}{AG} \\ \cline{2-7} 
+ 
+\multicolumn{1}{l|}{Conceptualization} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} \\ \cline{2-7} 
+\multicolumn{1}{l|}{Methodology} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}{\color[HTML]{656565} }} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} \\ \cline{2-7} 
+\multicolumn{1}{l|}{Software} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}{\color[HTML]{343434} }} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}{\color[HTML]{656565} }} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \cline{2-7} 
+\multicolumn{1}{l|}{Validation} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \cline{2-7} 
+\multicolumn{1}{l|}{Formal analysis} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \cline{2-7} 
+\multicolumn{1}{l|}{Investigation} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \cline{2-7} 
+\multicolumn{1}{l|}{Writing - Original Draft} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} \\ \cline{2-7} 
+\multicolumn{1}{l|}{Writing - Review \& Editing} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}{\color[HTML]{656565} }} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} \\ \cline{2-7} 
+\multicolumn{1}{l|}{Visualization} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} \\ \cline{2-7} 
+\multicolumn{1}{l|}{Supervision} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} \\ \cline{2-7} 
+\multicolumn{1}{l|}{Project administration} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \cline{2-7} 
+\multicolumn{1}{l|}{Data Curation} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}{\color[HTML]{9A0000} }} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \cline{2-7} 
+\end{tabular}%
+}
+\end{table}
+ 
+ 
+
+
+\comment {
+\textbf{Piotr Tempczyk}: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Writing - Original Draft, Writing - Review \& Editing, Visualization, Supervision, Project administration.
+\textbf{Rafał Michaluk}: Software, Investigation, Data Curation.
+\textbf{Łukasz Garncarek}: Methodology, Software, Formal analysis, Writing - Original Draft, Writing - Review \& Editing.
+\textbf{Przemysław Spurek}: Writing - Original Draft, Writing - Review \& Editing.
+\textbf{Jacek Tabor}: Conceptualization, Methodology, Writing - Review \& Editing, Supervision.
+\textbf{Adam Goliński}: Conceptualization, Methodology, Writing - Original Draft, Writing - Review \& Editing, Visualization, Supervision.
+}

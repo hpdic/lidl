@@ -1,0 +1,114 @@
+\documentclass{article}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs} %
+
+\usepackage{hyperref}
+
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+
+\usepackage[table,xcdraw]{xcolor}
+ 
+\usepackage[accepted]{icml2022}
+
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{wrapfig}
+\usepackage{url}
+\usepackage{letltxmacro}
+\LetLtxMacro{\originaleqref}{\eqref}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{todonotes}
+\usepackage{lscape}
+\usepackage{float}
+
+\def\R{\mathbb{R}}
+\def\P{\mathcal{P}}
+\def\N{\mathcal{N}}
+\def\U{\mathcal{U}}
+\def\F{\mathcal{F}}
+\def\B{\mathcal{B}}
+\def\TB{\mathcal{TB}}
+\def\logl{\mathrm{logl}}
+\def\I{I}
+
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\DD}{X}  %
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\abs}[1]{\left\lvert{#1}\right\rvert}
+\newcommand{\set}[1]{\left\{{#1}\right\}}
+\newcommand{\norm}[1]{\lVert{#1}\rVert}
+\newcommand{\pip}{\pi^\perp}
+\providecommand{\TO}{\textbf{to}\ }
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\icmltitlerunning{LIDL: Local Intrinsic Dimension Estimation Using Approximate Likelihood}
+
+\begin{document}
+
+\twocolumn[
+\icmltitle{LIDL: Local Intrinsic Dimension Estimation Using Approximate Likelihood}
+
+
+
+\icmlsetsymbol{equal}{*}
+
+\begin{icmlauthorlist}
+\icmlauthor{Piotr Tempczyk}{uw,op,dt}
+\icmlauthor{Rafał Michaluk}{uw,op}
+\icmlauthor{Łukasz Garncarek}{op,ap}
+\\
+\icmlauthor{Przemysław Spurek}{uj}
+\icmlauthor{Jacek Tabor}{uj}
+\icmlauthor{Adam Goli{\'n}ski}{ox}
+\end{icmlauthorlist}
+
+\icmlaffiliation{uw}{Institute of Informatics, University of Warsaw}
+\icmlaffiliation{op}{Polish National Institute for Machine Learning (\url{www.opium.sh})}
+\icmlaffiliation{dt}{\url{deeptale.ai}}
+\icmlaffiliation{ox}{University of Oxford}
+\icmlaffiliation{uj}{GMUM, Jagiellonian University}
+\icmlaffiliation{ap}{Applica}
+
+\icmlcorrespondingauthor{Piotr Tempczyk}{piotr.tempczyk@mimuw.edu.pl}
+
+\icmlkeywords{Intrinsic Dimension, Density Estimator, Local Intrinsic Dimension Estimation, Normalizing Flows}
+
+
+\vskip 0.3in
+]
+
+
+
+\printAffiliationsAndNotice{}  %
+
+
+
+
+\input{abstract}
+\input{introduction}
+\input{method}
+\input{empirical}
+\input{related}
+\input{experiments}
+\input{conclusions}
+
+\newpage
+\bibliography{bibliography}
+\bibliographystyle{icml2022}
+\input{supplement}
+\end{document}
