@@ -2,8 +2,6 @@
 \section{Introduction}
 \label{sec:introduction}
 
-\don{TODO}
-
 \begin{figure}[t]
     \centering
     \par\vspace{-0pt}\par
@@ -36,23 +34,23 @@ The first challenge such modern datasets present for LID estimation is scalabili
 Many of the existing methods for estimating ID rely on a non-parametric nearest neighbours-based approach which suffers from the curse of dimensionality.
 They estimate the LID by investigating the distribution of local distances and they run into the problem of ''boundary effects, which distort the distribution and lead to a negative bias especially for high dimensions where any manifold with a boundary has almost all of its volume concentrated close to the boundary'' \citep{johnsson2014low}, which is a symptom of the curse of dimensionality.
 ESS method \citep{johnsson2014low} itself sidesteps this challenge by using angular rather than distance information, leading to its competitive performance in high dimensions, as highlighted in our evaluations.
-In contrast, the method we propose uses a \emph{parametric} density estimation model which is a different mechanism to sidestep this challenge.
+In contrast, the method we propose uses a \emph{parametric} density estimation model which is a different mechanism to sidestep this challenge.\don{Well, a parametric method would need to finetune the parameters; I thought a non-parametric method is usually preferred.}
 
 The second challenge is being able to deal with datasets that have highly non-isotropic structure 
 (we refer to them as \emph{multiscale}). 
 A good example of this kind of dataset are images of a human face.
 In those datasets we have many latent factors of variation and some of them account for much less ambient-space variance than others. 
 For instance, let us consider two of them: eye and head rotation.
-Each of them induces 2-dimensional manifold in the data space, but variance coming from the latter factor is much larger. 
+Each of them induces 2-dimensional manifold in the data space, but variance coming from the latter factor is much larger.\don{Well, maybe we should try to split the object into multiple sub-manifolds or subspaces.} 
 
 The third challenge is being able to deal with dataset dimensionality on different scales, which includes dealing with the ambient-space noise in the data. Most of the data we use is affected by measurement noise, and all the datasets are deformed further by being quantized and stored as finite precision numbers. 
 To understand how it impacts LID estimation let us imagine a simple physical problem: we have a particle moving in an electromagnetic field, and our dataset is the set of 2-dimensional vectors describing its positions on a plane. 
 Additionally, our measurements are quantized with some very small quantization step. 
-When we magnify the dataset to the scale of quantization step, we see the dataset as a 0-dimensional manifold--it lies on a finite grid. When we zoom out to the scale of the measurement noise, we observe a 2-dimensional point cloud: one bigger dimension along the trajectory of the particle, and the other--smaller one--coming from the imperfect measurement. When we zoom out far enough, we observe only the 1-dimensional trajectory of that particle. It would be very convenient to be able to easily set an operating scale of an algorithm, e.g. have a possibility to ignore the dimensions that are artificially created by the measurement noise.
+When we magnify the dataset to the scale of quantization step, we see the dataset as a 0-dimensional manifold--it lies on a finite grid. When we zoom out to the scale of the measurement noise, we observe a 2-dimensional point cloud: one bigger dimension along the trajectory of the particle, and the other--smaller one--coming from the imperfect measurement. When we zoom out far enough, we observe only the 1-dimensional trajectory of that particle. It would be very convenient to be able to easily set an operating scale of an algorithm, e.g. have a possibility to ignore the dimensions that are artificially created by the measurement noise.\don{This sounds similar to topological data analysis, e.g., point cloud and dimensinality...}
 
-To address these problems, we propose a new method for Local Intrinsic Dimension estimation using approximate Likelihood (LIDL). Instead of using non-parametric methods based on local samples from the neighbourhood of a given point, it is based on parametric probability density estimation, which scales better to higher-dimensional setting. 
-At the core of our method lies the observation that when we add Gaussian noise $\N(0,\delta^2 I)$ to the dataset $X$ embedded in $\R^D$, the rate of change of the log-likelihood at $x \in X$ (at which LID equals $d$) is approximately linear in the logarithm of $\delta$. Moreover, the proportionality constant is $\beta \approx  d - D$ and we can estimate it using linear regression, thus estimating $d$. 
-We may view $\delta$ as a scale parameter of our method, which may be of practical benefit beneficial when dealing with noisy datasets. Intuitive visualisation of this concept can be found in Fig.~\ref{fig:method-1}, and the formal derivation can be found in Sec.~\ref{sec:method}.
+To address these problems, we propose a new method for Local Intrinsic Dimension estimation using approximate Likelihood (LIDL). Instead of using non-parametric methods based on local samples from the neighbourhood of a given point, it is based on parametric probability density\don{But how do you estimate the distribution? Any assumptions?} estimation, which scales better to higher-dimensional setting. 
+At the core of our method lies the observation that when we add Gaussian noise $\N(0,\delta^2 I)$ to the dataset $X$ embedded in $\R^D$\don{Is this a viable approach to, say, embedding encoders for LLM?}, the rate of change of the log-likelihood at $x \in X$ (at which LID equals $d$) is approximately linear in the logarithm of $\delta$. Moreover, the proportionality constant is $\beta \approx  d - D$ and we can estimate it using linear regression, thus estimating $d$. 
+We may view $\delta$ as a scale parameter of our method, which may be of practical benefit beneficial when dealing with noisy datasets. Intuitive visualisation of this concept can be found in Fig.~\ref{fig:method-1}\don{Isn't this TDA with different lifespans?}, and the formal derivation can be found in Sec.~\ref{sec:method}.
 
 To the best of our knowledge, LIDL is the first theoretically grounded method of LID estimation that uses global density estimation methods. In our method we relax the assumptions many algorithms make about uniformity of the density and the manifold flatness in the neighbourhood of $x$. We show theoretically and experimentally that we can deal with manifolds consisting of multiple multiscale connected components of different dimensions. We also compare our algorithm with a wide range of other LID estimation algorithms, and verify that only our algorithm can give unbiased estimates for high-dimensional datasets. 
 The code to reproduce our results is available at \url{github.com/opium-sh/lidl}.
